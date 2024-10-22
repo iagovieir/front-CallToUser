@@ -1,0 +1,25 @@
+.body{
+
+    .menu{
+        width: 20%;
+        position: fixed;
+    }
+    
+    .right{
+        width: 80%;
+        float: right;
+        
+        .sidebar{
+            width: 80%;
+            position: fixed;
+        }
+        
+        .main{
+            margin-top: 65px;
+        }
+    }
+
+    
+}
+
+

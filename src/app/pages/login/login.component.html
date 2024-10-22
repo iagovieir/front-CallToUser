@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="cardLogin">
+        <div class="labelLogin">
+            LOGIN
+        </div>
+        <div class="form">
+            <form (ngSubmit)="logar()" [formGroup]="form" #formDir="ngForm">
+
+                <input formControlName="email" name="email" type="email" placeholder="e-mail" required>
+                @if(email?.invalid && formDir.submitted){
+                        <span style="color: red;">Email obrigatório, favor preencher!</span>
+                }
+                <input formControlName="password" name="password" type="password" placeholder="password" required>
+                <button type="submit" [disabled]="form.invalid" >Enter</button>
+            </form>
+        </div>
+    </div>
+</div>
+

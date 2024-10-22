@@ -1,0 +1,76 @@
+.userOption{
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+
+    .register-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        background-color: #4CAF50; 
+        color: white;              
+        font-size: 16px;           
+        padding: 20px 20px 20px 20px;     
+        border: none;              
+        border-radius: 5px;        
+        cursor: pointer;           
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    .register-button:hover {
+        background-color: #45a049; 
+        transform: translateY(-2px); 
+      }
+      
+      .register-button:active {
+        transform: translateY(0); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+      }
+      
+      .register-button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+
+      
+}
+.conteinerTable{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  table {
+    width: 80%;
+    border-collapse: collapse;
+      
+    thead {
+      background-color: #f8f9fa;
+    }
+    
+    thead th {
+      text-align: left;
+      padding: 15px;
+      color: #333;
+    }
+
+    tbody td {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    
+    tbody {
+      text-decoration: none;
+    }
+    
+  }
+}

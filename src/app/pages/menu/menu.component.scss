@@ -1,0 +1,85 @@
+.menu{
+    background-color: #34495e;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 200px;
+
+        img{
+            width: 70%;
+            min-width: 250px;
+            max-width: 300px;
+            cursor: pointer;
+        }
+    }
+
+    .mainOption {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 15px;
+        overflow-y: auto;
+        
+        .option{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-radius:  15px 0 0 15px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            .icon{
+                display: flex;
+                justify-content: end;
+                width: 30%;
+    
+                svg{
+                    height: 40px;
+                    fill: #fff;
+                }
+            }
+            .label{
+                display: flex;
+                align-items: start;
+                width: 70%;
+            }
+        }
+
+        .option:hover {
+            color: #0d5aa7; 
+            background-color: #fff;
+    
+            .icon{
+                svg{
+                    fill: #0d5aa7;
+                }
+            }
+        }
+        
+        .active {
+            background-color: #fff; 
+            color: #0d5aa7;
+            
+            .icon{
+                svg{
+                    fill: #0d5aa7;
+                }
+            }
+        }
+    }
+    .mainOption::-webkit-scrollbar{
+        width: 0px;
+    }
+}

@@ -1,0 +1,49 @@
+.sidebar{
+    height: 60px;
+    display: flex;
+    background-color: #0d5aa72f;
+
+    .subsidebar{
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        width: 90%;
+
+        .notification{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+
+            svg{
+                height: 40px;
+                fill: #0d5aa7;
+            }
+        }
+
+        .notification:hover{
+            transform: scale(1.2);
+        }
+
+        .profilePhoto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+
+        
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%; 
+                object-fit: cover;
+            }
+        }
+
+        .profilePhoto:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    
+}
