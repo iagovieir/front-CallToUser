@@ -1,42 +1,46 @@
-<div class="userOption">
-    <button class="register-button">Cadastrar Usuário</button>
-</div>
-
-<div class="conteinerTable">
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Email Pessoal</th>
-            <th>Email Corporativo</th>
-            <th>Telefone</th>
-            <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-        @for(Users of users; track users){
-            <tr>
-            
-            <td>{{ Users.name }}</td>
-            <td>{{ Users.CPF }}</td>
-            <td>{{ Users.status?.name }}</td>
-            <td>{{Users.corporate_email}}</td>
-            <td>
-            @for( phone of Users.phone; track phone){
-                <div>{{ phone?.phone }}</div>
-            }
-            </td>
-            <td>
-                <button class="btn btn-primary btn-sm" >Editar</button>
-                <button class="btn btn-danger btn-sm" >Excluir</button>
-            </td>
-            </tr>
-        }@empty {
-            não existem usuários
-        }
-        </tbody>
-    </table>
+<div class="mainUsers">
+    <div class="userOption">
+        <button class="register-button">Cadastrar Usuário</button>
+    </div>
     
+    <div class="conteinerTable">
+    
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email Pessoal</th>
+                <th>Email Corporativo</th>
+                <th>Lider Direto</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(Users of users; track users){
+                <tr>
+                
+                <td>{{ Users.name }}</td>
+                <td>{{ Users.CPF }}</td>
+                <td>{{ Users.status?.name }}</td>
+                <td>{{ Users.corporate_email }}</td>
+                <td>{{ Users.leader?.name}}</td>
+                <td>
+                @for( phone of Users.phone; track phone){
+                    <div>{{ phone?.phone }}</div>
+                }
+                </td>
+                <td>
+                    <button class="btn btn-primary btn-sm" >Editar</button>
+                    <button class="btn btn-danger btn-sm" >Excluir</button>
+                </td>
+                </tr>
+            }@empty {
+                não existem usuários
+            }
+            </tbody>
+        </table>
+        
+    </div>
 </div>
